@@ -1150,6 +1150,7 @@ button {
     width: fit-content;
     animation: scroll 100s linear infinite;
 }
+.carousel-item
 /* bottom carousel different direction */
 .bottom-carousel[data-direction="right"] .inner-scroller{
     animation-direction: reverse;
@@ -1175,12 +1176,13 @@ button {
         mask: linear-gradient(180deg, transparent, white 20% , white 80%, transparent);
     }
     .top-carousel[data-animated="true"] .inner-scroller {
-        animation: scrollup 50s linear infinite;
+        animation: scrollup 50s linear infinite forwards;
     }
     .top-carousel .inner-scroller {
         flex-direction: column;
         margin: 0 auto;
         width: 80%;
+        padding-block: 0;
     }
     @keyframes scrollup {
         to{
