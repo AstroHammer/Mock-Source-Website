@@ -57,11 +57,19 @@ const slideWidth2 = slides2[0].getBoundingClientRect().width;
 
 //arrange the slides next to one another
 const setSlidePosition2 = (slide, index) => {
-    slide.style.left = slideWidth2 * index * 2 + 'px';
+    slide.style.left = slideWidth2 * index * 1.5 + 'px';
 }
 
 slides2.forEach(setSlidePosition2);
+window.addEventListener('resize', function() {
+    const slideWidth2 = slides2[0].getBoundingClientRect().width;
 
+    const setSlidePosition2 = (slide, index) => {
+        slide.style.left = slideWidth2 * index * 1.5 + 'px';
+    }
+    
+    slides2.forEach(setSlidePosition2);
+})
 
 const moveToSlide2 = (track2, currentSlide, targetSlide) => {
     track2.style.transform = 'translateX(-' + targetSlide.style.left + ')';
@@ -125,28 +133,6 @@ mq900prevButton2.addEventListener('click', e => {
     hideShowArrows2(slides, prevButton2, nextButton2, prevIndex);
 })
 
-// don't know why this isnt working, something wrong with the matchmedia
-// let mql2 = window.matchMedia('(max-width: 400)');
-// // const elementToMove = document.querySelector('.s3-btn-left-wrap-hidden');
-// // const parentElement = document.querySelector('.panel2-container');
-
-// function moveButton(mql2) {
-//     if (mql2.matches) {
-//         const elementToMove = document.querySelector('.s3-btn-left-wrap-hidden');
-//         console.log(elementToMove)
-//         const parentElement = elementToMove.parentNode;
-//         console.log(parentElement);
-//         const siblingElement = parentElement.querySelector('.s3-btn-right-wrap-hidden');
-//         console.log(siblingElement);
-//         parentElement.insertBefore(elementToMove, siblingElement);
-//     } else {
-//         console.log('Did not work');
-//     }
-//     console.log('hello');
-// }
-
-// mql2.addEventListener('change', moveButton);
-
 
 // Clicking Carousel Reviews
 
@@ -157,17 +143,22 @@ const prevButton = document.querySelector('.panel-btn-left');
 const dotsNav = document.querySelector('.panel-nav');
 const dots = Array.from(dotsNav.children);
 
+
 const slideWidth = slides[0].getBoundingClientRect().width;
-
-//arrange the slides next to one another
-//slides[0].style.left = slideWidth * 0 + 'px';
-//slides[1].style.left = slideWidth * 1 + 'px';
-//slides[2].style.left = slideWidth * 2 + 'px';
 const setSlidePosition = (slide, index) => {
-    slide.style.left = slideWidth * index * 2 + 'px';
+    slide.style.left = slideWidth * index + 'px';
 }
-
 slides.forEach(setSlidePosition);
+
+window.addEventListener('resize', function() {
+    const slideWidth = slides[0].getBoundingClientRect().width;
+
+    const setSlidePosition = (slide, index) => {
+        slide.style.left = slideWidth * index + 'px';
+    }
+    
+    slides.forEach(setSlidePosition);
+})
 
 const moveToSlide = (track, currentSlide, targetSlide) => {
     track.style.transform = 'translateX(-' + targetSlide.style.left + ')';
@@ -248,7 +239,7 @@ const pp140s = document.querySelectorAll('svg.pp140');
 const config1 = {
     root: null,
     rootMargin: '0px',
-    threshold: .8
+    threshold: .5
 };
 const config2 = {
     root: null,
@@ -421,71 +412,131 @@ observer140out.observe(document.querySelector('.s5-wrapper'));
 
 
 
-// snippets[0] when above 380px 
-// window size causes it to equal 0px height 
-// because there is no snippets in the 
-// [0] place before window is under 380px
+// function render(mql) {
+    
+//     if (mql.matches) {
+
+        
+        
+//         let snippetSize = snippets[0].clientHeight
+        
+//         inner_slider.style.transform = `translateY(${-snippetSize}px)`;
+//         console.log(current);
+                
+//         prevBtn.addEventListener('click', () => {
+//             if (current <= 0) return;
+//             inner_slider.style.transition = 'transform 200ms ease-in-out';
+//             current--;
+//             inner_slider.style.transform = `translateY(${-snippetSize * current}px)`;
+//         });
+//         nextBtn.addEventListener('click', () => {
+//             if (current >= snippets.length - 1) return;
+//             inner_slider.style.transition = 'transform 200ms ease-in-out';
+//             console.log(current + 'current before iteration');
+//             current++;
+//             inner_slider.style.transform = `translateY(${-snippetSize * current}px)`;
+//             console.log(current + 'current after iteration');
+//         });
+//         inner_slider.addEventListener('transitionend', () => {
+//             if (snippets[current].classList.contains('first-snip')) {
+//                 inner_slider.style.transition = 'none';
+//                 current = snippets.length - 2;
+//                 inner_slider.style.transform = `translateY(${-snippetSize * current}px)`;
+                
+//             }
+//         });
+//         inner_slider.addEventListener('transitionend', () => {
+//             if (snippets[current].classList.contains('last-snip')) {
+//                 inner_slider.style.transition = 'none';
+//                 current = snippets.length - current;
+//                 inner_slider.style.transform = `translateY(${-snippetSize * current}px)`;
+//             }
+//         });
+        
+//         console.log('This is if');
+//         console.log(current);
+//     } else {
+        
+//         const inner_slider = document.querySelector('.hidden-snippets2-inner-panel');
+//         inner_slider.style.transform = 'none';
+//         inner_slider.style.transition = 'none';
+//         console.log('This is else');
+//     }
+    
+// } 
+
+// mql.addEventListener('change', render);
 
 
-//first get it to work with window going from big to small-going in, 
-//then small to big-going out
 
 let mql = window.matchMedia('(max-width: 380px)');
 
+const snippets = document.querySelectorAll('.hidden-snippets2-inner-panel > div');
+const inner_slider = document.querySelector('.hidden-snippets2-inner-panel');
+const prevBtn = document.querySelector('.upBtn');
+const nextBtn = document.querySelector('.downBtn');
 
+let snippetSize = snippets[0].clientHeight
+inner_slider.style.transform = `translateY(${-snippetSize}px)`;
+
+let current = 1;
+
+
+function addListeners() {
+    prevBtn.addEventListener('click', moveSlidePrev, false);
+    nextBtn.addEventListener('click', moveSlideNext, false);
+    inner_slider.addEventListener('transitionend', resetSlide, false);
+}
+function moveSlidePrev() {
+    if (current <= 0) return;
+    inner_slider.style.transition = 'transform 200ms ease-in-out';
+    current--;
+    inner_slider.style.transform = `translateY(${-snippetSize * current}px)`;
+    console.log(current);
+}
+function moveSlideNext() {
+    if (current >= snippets.length - 1) return;
+    inner_slider.style.transition = 'transform 200ms ease-in-out';
+    current++;
+    inner_slider.style.transform = `translateY(${-snippetSize * current}px)`;
+    console.log(current);
+}
+function resetSlide() {
+    if (snippets[current].classList.contains('first-snip')) {
+        inner_slider.style.transition = 'none';
+        current = snippets.length - 2;
+        console.log(current + 'reset');
+        inner_slider.style.transform = `translateY(${-snippetSize * current}px)`;
+    } else if (snippets[current].classList.contains('last-snip')) {
+        inner_slider.style.transition = 'none';
+        current = snippets.length - current;
+        console.log(current + 'reset');
+        inner_slider.style.transform = `translateY(${-snippetSize * current}px)`;
+    }
+}
+function removeListeners() {
+    prevBtn.removeEventListener('click', moveSlidePrev, false);
+    nextBtn.removeEventListener('click', moveSlideNext, false);
+    inner_slider.removeEventListener('transitionend', resetSlide, false);
+}
+addListeners();
 function render(mql) {
-    
+
+    let snippetSize = snippets[0].clientHeight
+    inner_slider.style.transform = `translateY(${-snippetSize}px)`;
+
     if (mql.matches) {
-        const snippets = document.querySelectorAll('.hidden-snippets2-inner-panel > div');
-        const slider_container = document.querySelector('.hidden-snippets2-panel-container');
-        const inner_slider = document.querySelector('.hidden-snippets2-inner-panel');
-        
-        const prevBtn = document.querySelector('.upBtn');
-        const nextBtn = document.querySelector('.downBtn');
-        
-        
-        let snippetSize = snippets[0].clientHeight
-        let current = 1;
-        inner_slider.style.transform = `translateY(${-snippetSize}px)`;
+        removeListeners();
+        addListeners();
         console.log(current);
-                
-        prevBtn.addEventListener('click', () => {
-            if (current <= 0) return;
-            inner_slider.style.transition = 'transform 200ms ease-in-out';
-            current--;
-            inner_slider.style.transform = `translateY(${-snippetSize * current}px)`;
-        })
-        nextBtn.addEventListener('click', () => {
-            if (current >= snippets.length - 1) return;
-            inner_slider.style.transition = 'transform 200ms ease-in-out';
-            current++;
-            inner_slider.style.transform = `translateY(${-snippetSize * current}px)`;
-            console.log(current);
-        })
-        inner_slider.addEventListener('transitionend', () => {
-            if (snippets[current].classList.contains('first-snip')) {
-                inner_slider.style.transition = 'none';
-                current = snippets.length - 2;
-                inner_slider.style.transform = `translateY(${-snippetSize * current}px)`;
-                
-            }
-        })
-        inner_slider.addEventListener('transitionend', () => {
-            if (snippets[current].classList.contains('last-snip')) {
-                inner_slider.style.transition = 'none';
-                current = snippets.length - current;
-                inner_slider.style.transform = `translateY(${-snippetSize * current}px)`;
-            }
-        })
-        
-        console.log('This is if');
-        console.log(current);
+        console.log('This is if');   
     } else {
-        const inner_slider = document.querySelector('.hidden-snippets2-inner-panel');
+        removeListeners();
         inner_slider.style.transform = 'none';
         inner_slider.style.transition = 'none';
+        console.log(current);
         console.log('This is else');
     }
-} 
+}
 
 mql.addEventListener('change', render);

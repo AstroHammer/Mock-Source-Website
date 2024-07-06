@@ -956,6 +956,9 @@ button {
 .s3-btn-left-wrap, .s3-btn-right-wrap {
     width: 70px;
 }
+.s3-btn-left-wrap-hidden, .s3-btn-right-wrap-hidden {
+    flex-basis: 40px;
+}
 
 @media screen and (min-width: 900px) {
     .s3-btn-left-wrap-hidden, .s3-btn-right-wrap-hidden {
@@ -1012,20 +1015,6 @@ button {
 
 /* SECTION FOUR */
 
-/* .s4-container::before,
-.s4-container::after {
-  content: '';
-  position: absolute;
-  height: 300px;
-  bottom: 750px;
-  right: 0;
-  left: 0;
-  background: #EDEDED;
-  transform: skewY(-3deg);
-  -webkit-transform: skewY(-3deg);
-  -moz-transform: skewY(-3deg);
-  -ms-transform: skewY(-3deg);
-} */
 .s4-intro-container {
     padding-top: 100px;
 }
