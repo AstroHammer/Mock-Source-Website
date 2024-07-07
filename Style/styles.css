@@ -2345,6 +2345,7 @@ button {
     margin-right: 50px;
     /* , -15px 5px #1C2332, -15px 5px #1C2332 */
     box-shadow: -20px 15px #1C2332;
+    visibility: hidden;
     /* animation: team-txt-scroll-right 2.5s ease-out forwards; */
 }
 .text-block-right {
@@ -2353,13 +2354,16 @@ button {
     box-shadow: 20px 15px #1C2332;
     /* animation: team-txt-scroll-left 2.5s ease-out forwards; */
     text-align: right;
+    visibility: hidden;
 }
 .img-block-left {
     box-shadow: -20px 15px #1C2332;
+    visibility: hidden;
     /* animation: team-txt-scroll-right 2.5s ease-out forwards; */
 }
 .img-block-right {
     box-shadow: 20px 15px #1C2332;
+    visibility: hidden;
     /* animation: team-txt-scroll-left 2.5s ease-out forwards; */
 }
 .tbl-animation {
@@ -2378,6 +2382,7 @@ button {
     0% {
         transform: translateX(-500px);
         opacity: 0;
+        visibility: visible;
     }
     50% {
         opacity: 0;
@@ -2395,12 +2400,14 @@ button {
     100% {
         transform: translateX(0);
         opacity: 1;
+        visibility: visible;
     }
 }
 @keyframes team-img-scroll-left {
     0% {
         transform: translateX(500px);
         opacity: 0;
+        visibility: visible;
     }
     50% {
         opacity: 0;
@@ -2418,12 +2425,14 @@ button {
     100% {
         transform: translateX(0);
         opacity: 1;
+        visibility: visible;
     }
 }
 @keyframes team-txt-scroll-left {
     0% {
         transform: translateX(500px);
         opacity: 0;
+        visibility: visible;
     }
     50% {
         opacity: 0;
@@ -2441,12 +2450,14 @@ button {
     100% {
         transform: translateX(0);
         opacity: 1;
+        visibility: visible;
     }
 }
 @keyframes team-txt-scroll-right {
     0% {
         transform: translateX(-500px);
         opacity: 0;
+        visibility: visible;
     }
     50% {
         opacity: 0;
@@ -2464,6 +2475,7 @@ button {
     100% {
         transform: translateX(0);
         opacity: 1;
+        visibility: visible;
     }
 }
 .border-separate {
@@ -2557,7 +2569,6 @@ button {
     text-align: center;
     box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, .3);
     border-radius: 20px 20px 0 0;
-    /* awadawdaw */
 }
 .quicklinks-title-container h2 {
     font-size: 1.7em;
