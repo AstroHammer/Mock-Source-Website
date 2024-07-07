@@ -373,7 +373,7 @@ observer140out.observe(document.querySelector('.s5-wrapper'));
 
 // s1 Infinite Clicking Carousel//
 
-let mql = window.matchMedia('(max-width: 380px)');
+let mql = window.matchMedia('(max-width: 400px)');
 
 const snippets = document.querySelectorAll('.hidden-snippets2-inner-panel > div');
 const inner_slider = document.querySelector('.hidden-snippets2-inner-panel');

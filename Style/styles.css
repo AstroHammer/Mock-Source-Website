@@ -734,7 +734,7 @@ button {
         grid-gap: 5vw;
     }
 }
-@media screen and (min-width: 380px) {
+@media screen and (min-width: 400px) {
     .snippet-panel-arrow-btn-container {
         display: none;
     }
@@ -745,7 +745,7 @@ button {
         display: none;
     }
 }
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 400px) {
     .hidden-snippets2 {
         height: 450px;
         border: 10px solid #1C2332;
@@ -3030,7 +3030,7 @@ button {
     }
     .sign-up-page-details {
         box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3), 0 -1px 12px rgba(0, 0, 0, 0.3);;
-        margin: 120px auto 20px auto;
+        margin: 5dvh auto 0 auto;
         width: 60%;
     }
     .interface-placemarker {
@@ -3042,10 +3042,10 @@ button {
         margin-top: 50px;
     }
     .left-content h1 {
-        font-size: clamp(2rem, 10vw, 3.5rem)
+        font-size: clamp(2rem, 6vw, 3.2rem)
     }
     .left-content h2 {
-        font-size: clamp(.9rem, 6vw, 2rem);
+        font-size: clamp(1.3rem, 4vw, 2rem);
     }
     .signup-footer-wrapper {
         flex-basis: 20%;
