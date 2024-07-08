@@ -67,16 +67,24 @@ window.addEventListener('resize', function() {
     const setSlidePosition2 = (slide, index) => {
         slide.style.left = slideWidth2 * index * 1.5 + 'px';
     }
-    
     slides2.forEach(setSlidePosition2);
+
+    const currentSlide = track2.querySelector('.current-slide2');
+    adjustSlideContainer(track2, currentSlide);
 })
 
+//
+
 const moveToSlide2 = (track2, currentSlide, targetSlide) => {
+    track2.style.transition = 'transform 400ms ease-in';
     track2.style.transform = 'translateX(-' + targetSlide.style.left + ')';
     currentSlide.classList.remove('current-slide2');
     targetSlide.classList.add('current-slide2');
 }
-
+const adjustSlideContainer = (track2, targetSlide) => {
+    track2.style.transition = 'none';
+    track2.style.transform = 'translateX(-' + targetSlide.style.left + ')';
+}
 const hideShowArrows2 = (slides, prevButton2, nextButton2, targetIndex) => {
     if (targetIndex === 0) {
         prevButton2.classList.add('is-hidden2');
@@ -95,7 +103,7 @@ const hideShowArrows2 = (slides, prevButton2, nextButton2, targetIndex) => {
         mq900nextButton2.classList.remove('is-hidden2');
     }
 }
-
+//WIDE SCREEN BUTTONS
 // when i click right, move slides to the right
 nextButton2.addEventListener('click', e => {
     const currentSlide = track2.querySelector('.current-slide2');
@@ -114,6 +122,8 @@ prevButton2.addEventListener('click', e => {
     moveToSlide2(track2, currentSlide, prevSlide);
     hideShowArrows2(slides, prevButton2, nextButton2, prevIndex);
 })
+
+//THIN SCREEN BUTTONS
 // when i click right, move slides to the right
 mq900nextButton2.addEventListener('click', e => {
     const currentSlide = track2.querySelector('.current-slide2');
@@ -156,16 +166,22 @@ window.addEventListener('resize', function() {
     const setSlidePosition = (slide, index) => {
         slide.style.left = slideWidth * index + 'px';
     }
-    
     slides.forEach(setSlidePosition);
+
+    const currentSlide = track.querySelector('.current-slide');
+    adjustSlideContainer(track, currentSlide);
 })
 
 const moveToSlide = (track, currentSlide, targetSlide) => {
+    track.style.transition = 'transform 250ms ease-in';
     track.style.transform = 'translateX(-' + targetSlide.style.left + ')';
     currentSlide.classList.remove('current-slide');
     targetSlide.classList.add('current-slide');
 }
-
+const adjustSlideContainer2 = (track, targetSlide) => {
+    track.style.transition = 'none';
+    track.style.transform = 'translateX(-' + targetSlide.style.left + ')';
+}
 const updateDots = (currentDot, targetDot) => {
     currentDot.classList.remove('current-slide');
     targetDot.classList.add('current-slide');
