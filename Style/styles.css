@@ -2200,6 +2200,40 @@ button {
 .slide-sum > p {
     font-size: clamp(.9rem, 1.75vw, 1.1rem);
 }
+.slide-sum > p:first-of-type {
+    margin-bottom: 20px;
+}
+.slide-sum > p + p {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .5s ease-out;
+}
+.expand-btn {
+    background: none;
+    font-variant: small-caps;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 20px;
+    color: blue;
+    position:relative;
+}
+.expand-btn:after {
+    content: '\02C5';
+    position: absolute;
+    padding: 0 10px;
+    font-size: 15px;
+    top: 6px;
+    transition: transform .4s ease-out;
+}
+.expand-btn.active {
+    color: red;
+    transition: color .2s ease-out;
+    transition-delay: .3s;
+}
+.expand-btn.active:after {
+    transform: rotate(-180deg);
+    transition: transform .4s ease-out;
+}
 .slide-img {
     max-width: 41.66667%;
     margin-bottom: 0;

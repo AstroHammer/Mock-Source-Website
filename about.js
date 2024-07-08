@@ -135,3 +135,46 @@ datesNav.addEventListener('click', e => {
     updateDates(currentDot, targetDot);
     hideShowArrows(slides, prevButton, nextButton, targetIndex);
 })
+
+
+// See More accordions
+// const seeMoreBtn = document.querySelectorAll('.expand-btn');
+// const btnContainer = document.querySelectorAll('.expand-btn-container');
+// seeMoreBtn.addEventListener('click', showText);
+
+// const textToAppear = btnContainer.forEach(element => {
+//     element.previousElementSibling.style.maxHeight = 0;
+//     element.previousElementSibling.style.display = 'none';
+// });
+
+seeMoreBtn = document.querySelectorAll('.expand-btn');
+
+
+seeMoreBtn.forEach(button => {
+    button.addEventListener('click', event => {
+        button.classList.toggle('active');
+        const textToSee = button.previousElementSibling;
+        if (button.classList.contains('active')) {
+            textToSee.style.maxHeight = textToSee.scrollHeight + 'px';
+            button.innerHTML = 'see less';
+        } else {
+            textToSee.style.maxHeight = 0;
+            button.innerHTML = 'see more';
+        }
+    });
+});
+
+function alterMaxHeight() {
+    const seeMoreBtn = document.querySelectorAll('.expand-btn');
+
+    seeMoreBtn.forEach(button => {
+        const textToSee = button.previousElementSibling;
+        if (button.classList.contains('active')) {
+            textToSee.style.transition = 'none';
+            textToSee.style.maxHeight = textToSee.scrollHeight + 'px';
+            textToSee.style.transition = 'max-height .3s ease-out';
+        } 
+    })
+}
+window.addEventListener('resize', alterMaxHeight);
+
