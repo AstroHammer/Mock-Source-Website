@@ -13,13 +13,6 @@
     font-family: "Titillium Web", sans-serif;
     box-sizing: border-box;
 }
-*:before, *:after {
-    box-sizing: border-box;
-}
-.home-backdrop {
-    background: url("https://cdn.wallpapersafari.com/34/48/wZAcEX.jpg") 0 0 repeat-y;
-    background-size: contain;
-}
 html {
     scroll-behavior: smooth;
 }
@@ -94,6 +87,11 @@ button {
 .section-padding {
     padding: 100px 5% 100px 5%;
 }
+.header-shadow {
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
 .btn {
     padding: .5em 2.5em;
     padding-bottom: .7em;
@@ -147,8 +145,7 @@ button {
     cursor: pointer;
 }
 .arrow-btn-wrapper {
-    display: flex;
-    align-items:center;
+    align-items: center;
 }
 .wht-btn {
     font-weight: 700;
@@ -180,6 +177,9 @@ button {
 .sign-up-btn:hover {
     color: white;
     background-color: #405175;
+    -webkit-transition: all .2s linear;
+    -moz-transition: all .2s linear;
+    -o-transition: all .2s linear;
     transition: all .2s linear;
 }
 /* general form styles */
@@ -250,6 +250,10 @@ button {
     text-align: center;
     background-color: #1C2332;
     clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 50% 100%, 0% 80%);
+    -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 50% 100%, 0% 80%);
+    -moz-clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 50% 100%, 0% 80%);
+    -ms-clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 50% 100%, 0% 80%);
+    -o-clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 50% 100%, 0% 80%);
 }
 .polygon-path-intro-bg h1 {
     font-size: 3em;
@@ -329,7 +333,7 @@ button {
     height: 40px;
 }
 .toggle {
-    inset: 0 0 0 0;
+    inset: 0;
     position: absolute;
     z-index: 999;
     opacity: 0;
@@ -337,7 +341,7 @@ button {
 }
 .hamburger {
     position: absolute;
-    inset: 0 0 0 0;
+    inset: 0;
     z-index: 998;
     display: flex;
     justify-content: center;
@@ -531,10 +535,7 @@ button {
     content: ""; 
     background: #DEE0E9; 
     position: absolute; 
-    left: 0; 
-    right: 0; 
-    top: 0; 
-    bottom: 0;
+    inset: 0;
     border-radius: 20%;
     z-index: -1;
  }
@@ -549,16 +550,7 @@ button {
     box-shadow: 0px 0px 8px -20px #c8c8c8, inset 0 0 8px 20px #c8c8c8;
     border-radius: 50%;
 }
-.main-img-mq-bg {
-    display: none;
-}
-.dark-bg-main {
-    display: none;
-}
-.third-bg-layer {
-    display: none;
-}
-.fourth-bg-layer {
+.main-img-mq-bg, .dark-bg-main, .third-bg-layer, .fourth-bg-layer {
     display: none;
 }
 @media screen and (min-width: 1501px) {
@@ -574,6 +566,7 @@ button {
         -webkit-transform: skewY(-3deg);
         -moz-transform: skewY(-3deg);
         -ms-transform: skewY(-3deg);
+        -o-transform: skewY(-3deg);
       }
 }
 @media screen and (max-width: 1500px) {
@@ -590,9 +583,13 @@ button {
         background-position: center;
         background-size: cover;
         position: absolute;
-        inset: 0 0 0 0;  
+        inset: 0;  
         opacity: .4;
         clip-path: polygon(0 0, 100% 0, 100% 86%, 0 96%, 0 0);
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 86%, 0 96%, 0 0);
+        -moz-clip-path: polygon(0 0, 100% 0, 100% 86%, 0 96%, 0 0);
+        -ms-clip-path: polygon(0 0, 100% 0, 100% 86%, 0 96%, 0 0);
+        -o-clip-path: polygon(0 0, 100% 0, 100% 86%, 0 96%, 0 0);
         display: block;
     }
     .main-flex {
@@ -609,6 +606,10 @@ button {
     }
     .third-bg-layer {
         clip-path: polygon(0 0, 100% 0, 100% 88%, 0 98%, 0 0);
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 88%, 0 98%, 0 0);
+        -moz-clip-path: polygon(0 0, 100% 0, 100% 88%, 0 98%, 0 0);
+        -ms-clip-path: polygon(0 0, 100% 0, 100% 88%, 0 98%, 0 0);
+        -o-clip-path: polygon(0 0, 100% 0, 100% 88%, 0 98%, 0 0);
         background: linear-gradient(45deg, #7083bd, #B57BA6, #7083bd, #B57BA6);
         z-index: -3;
         display: block;
@@ -616,6 +617,10 @@ button {
     }
     .fourth-bg-layer {
         clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%, 0 0);
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%, 0 0);
+        -moz-clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%, 0 0);
+        -ms-clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%, 0 0);
+        -o-clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%, 0 0);
         background-color: #DEE0E9;
         z-index: -4;
         display: block;
@@ -646,9 +651,6 @@ button {
     width: 70px;
 }
 @media screen and (max-width: 980px) {
-    .social-icons {
-        
-    }
     .icon-fill-container {
         margin: 20px 0;
     }
@@ -673,11 +675,11 @@ button {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 2vw;
-    grid-row-gap: 2vw;
+    gap: 2vw;
 }
 .s1-grid-items {
-    box-shadow: 0 10px 10px 5px rgba(0, 0, 0, .1);
+    box-shadow: 0 10px 10px 5px #dcdcdc;
+    box-shadow: 0 10px 10px 5px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     background: white; 
     height: 100%;
@@ -731,7 +733,7 @@ button {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 1fr);
-        grid-gap: 5vw;
+        gap: 5vw;
     }
 }
 @media screen and (min-width: 400px) {
@@ -753,10 +755,9 @@ button {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        grid-gap: 0;
+        gap: 0;
     }
     .hidden-snippets2-panel-container {
-        
         width: 95%;
         height: 100%;
         overflow: hidden;
@@ -767,13 +768,16 @@ button {
         height: 100%;
         width: 100%;
         position: relative;
-        grid-gap: 0;
+        gap: 0;
     }
     .snippet-item {
         box-shadow: none;
         height: 100%;
         width: 100%;
         flex: 1 0 100%;
+        -webkit-box-flex: 1 0 100%;
+        -webkit-flex: 1 0 100%;
+        -ms-flex: 1 0 100%;
     }
     .first-snip {
         display: block;
@@ -816,24 +820,36 @@ button {
 
 /* SECTION TWO */
 .s2-grid {
-    grid-gap: 10%;
+    gap: 10%;
 }
 .sT-img {
     transform: skewX(10deg);
+    -webkit-transform: skewX(10deg);
+    -moz-transform: skewX(10deg);
+    -ms-transform: skewX(10deg);
+    -o-transform: skewX(10deg);
 }
 .sT-img-wrapper1 {
     transform: skewX(10deg);
+    -webkit-transform: skewX(10deg);
+    -moz-transform: skewX(10deg);
+    -ms-transform: skewX(10deg);
+    -o-transform: skewX(10deg);
     border-radius: 10px 0 10px 0;
     position: relative;
 }
 .sT-img-wrapper2 {
     transform: skewX(-20deg);
+    -webkit-transform: skewX(-20deg);
+    -moz-transform: skewX(-20deg);
+    -ms-transform: skewX(-20deg);
+    -o-transform: skewX(-20deg);
     border-radius: 0 10px 0 10px;
     position: relative;
 }
 @media screen and (max-width: 1250px) {
     .s2-grid {
-        grid-gap: 5%;
+        gap: 5%;
     }
 }
 @media screen and (max-width: 740px) {
@@ -859,6 +875,10 @@ button {
         border-top: 3px solid #1C2332;
         border-radius: 5px;
         flex-grow: 1;
+        -moz-flex-grow: 1;
+        -webkit-flex-grow: 1;
+        -ms-flex-grow: 1;
+        -o-flex-grow: 1;
         text-align: center;
     }
     .border-style-container:before {
@@ -880,9 +900,8 @@ button {
 /* SECTION THREE */
 .s3-intro {
     max-width: 800px;
-    margin: 0 auto;
+    margin: 0 auto 100px auto;
     text-align: center;
-    margin-bottom: 100px;
 }
 .s3-intro h2 {
     padding-bottom: 20px;
@@ -905,7 +924,6 @@ button {
     left: 50%;
     transform: translate(-50%, -50%);
 }
-
 /* end sign up form */
 .s3-grid-text {
     margin-left: 2.5%;
@@ -966,6 +984,9 @@ button {
     .s3-btn-left-wrap-hidden, .s3-btn-right-wrap-hidden {
         display: none;
     }
+    .s3-flex .home-form-container, .s3-flex .s3-grid-text {
+        width: 50%;
+    }
 }
 @media screen and (max-width: 900px) {
     .s3-wrapper {
@@ -1014,7 +1035,6 @@ button {
     }
 }
 
-
 /* SECTION FOUR */
 
 .s4-intro-container {
@@ -1024,6 +1044,10 @@ button {
     padding-top: 200px;
     padding-bottom: 100px;
     clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%, 0 10%);
+    -webkit-clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%, 0 10%);
+    -moz-clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%, 0 10%);
+    -ms-clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%, 0 10%);
+    -o-clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%, 0 10%);
 }
 
 /* Animated Carousel */
@@ -1045,7 +1069,11 @@ button {
     position: absolute;
     right: 30px;
     top: -20px;
-    animation: svganimate 3s linear infinite;
+}
+@media (prefers-reduced-motion: no-preference) {
+    .svg-pos {
+        animation: svganimate 3s linear infinite;
+    }
 }
 .s3-item-info {
     height: 100%;
@@ -1141,7 +1169,6 @@ button {
     width: fit-content;
     animation: scroll 100s linear infinite;
 }
-.carousel-item
 /* bottom carousel different direction */
 .bottom-carousel[data-direction="right"] .inner-scroller{
     animation-direction: reverse;
@@ -1201,7 +1228,59 @@ button {
         top: -10px;
     }
 }
-
+@media (prefers-reduced-motion) {
+    .inner-scroller {
+        justify-content: center;
+        align-items: center;
+    }
+    .carousel-item {
+        margin: 0;
+    }
+    .inner-scroller {
+        padding-block: 2rem;
+    }
+    @media (max-width:950px) {
+        .carousel-item {
+            width: 250px;
+        }
+    }
+    @media (max-width:850px) {
+        .s4-wrapper {
+            height: 1000px;
+        }
+        .top-carousel {
+            display: flex;
+        }
+        .s3-item-info p {
+            display: none;
+        }
+        .carousel-item {
+            height:50px;
+            width: 75%;
+        }
+        .s3-svg-size {
+            width: 45px;
+            height: 45px;
+        }
+        .top-carousel .inner-scroller {
+            width: 100%;
+            padding-top: 75px;
+        }
+        .top-carousel .inner-scroller .carousel-item:nth-child(6) {
+            margin-bottom: 50px;
+        }
+    }
+    @media (max-width: 500px) {
+        .svg-pos {
+            right: 0;
+        }
+    }
+    @media (max-width: 420px) {
+        .svg-pos {
+            right: -20px;
+        }
+    }
+}
 /* SECTION FIVE */
 .s5-flex {
     gap: 5%;
@@ -1450,10 +1529,8 @@ button {
         max-width: 500px;
     }
     .puzzle-path-container {
-        grid-column-start: 2;
-        grid-row-start: 2;
-        grid-column-end: 3;
-        grid-row-end: 3;
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
     }
 }
 @media screen and (max-width: 1000px) {
@@ -1532,6 +1609,7 @@ button {
     border-radius: 50%;
     width: 15px;
     height: 15px;
+    background: #d0d0d7;
     background: rgba(208, 208, 215, 1);
     margin: 0 10px 0 10px;
     cursor: pointer;
@@ -1559,6 +1637,7 @@ button {
     text-align: center;
 }
 .panel-nav .current-slide {
+    background: #1c2332;
     background: rgba(28, 35, 50, 1)
 }
 .is-hidden {
@@ -1694,7 +1773,7 @@ button {
 .serv-shadow-box {
     margin: 0 25px 40px 25px;
     padding: 40px 30px;
-    box-shadow: 2px 8px 20px 0 rgba(35,31,32,.5)
+    box-shadow: 2px 8px 20px 0 rgba(35,31,32,.5);
 }
 .serv-shadow-box h2 {
     font-size: 2.5em;
@@ -1783,6 +1862,10 @@ button {
 /* About Page */
 /* Main */
 .sticky-section {
+    position: -webkit-sticky;
+    position: -moz-sticky;
+    position: -ms-sticky;
+    position: -o-sticky;
     position: sticky;
     top: 0;
 }
@@ -2190,8 +2273,6 @@ button {
 .article-section-container {
     background: #EDEDED;
     max-width: 82.5rem;
-    margin-left: auto;
-    margin-right: auto;
     padding-bottom: 50px;
     border-radius: 25px;
 }
@@ -2245,7 +2326,7 @@ button {
     border: 3px solid #1C2332;
     font-size: 1.2em;
     font-weight: 700;
-    padding: 20px 50px 20px 50px;
+    padding: 20px 50px;
 }
 @media screen and (max-width: 1100px) {
     .left-side-article {
@@ -2336,35 +2417,29 @@ button {
     max-width: 500px;
     border-radius: 50%;
     background-color: #7389AE;
-    max-width: 500px;
     border-radius: 50%;
 }
 /* utility for text-left/right and img-left/right */
 .text-block-left {
     padding: 30px;
     margin-right: 50px;
-    /* , -15px 5px #1C2332, -15px 5px #1C2332 */
     box-shadow: -20px 15px #1C2332;
     visibility: hidden;
-    /* animation: team-txt-scroll-right 2.5s ease-out forwards; */
 }
 .text-block-right {
     padding: 30px;
     margin-left: 50px;
     box-shadow: 20px 15px #1C2332;
-    /* animation: team-txt-scroll-left 2.5s ease-out forwards; */
     text-align: right;
     visibility: hidden;
 }
 .img-block-left {
     box-shadow: -20px 15px #1C2332;
     visibility: hidden;
-    /* animation: team-txt-scroll-right 2.5s ease-out forwards; */
 }
 .img-block-right {
     box-shadow: 20px 15px #1C2332;
     visibility: hidden;
-    /* animation: team-txt-scroll-left 2.5s ease-out forwards; */
 }
 .tbl-animation {
     animation: team-txt-scroll-right 2s ease-out forwards;
@@ -2529,16 +2604,14 @@ button {
         bottom: 0%;
     }
 }
-
 /* Blog Page */
 .fixed-background-container {
-    height: auto;
+    height:auto;
     position: relative;
 }
 .fixed-background {
     background: url("/Style/Blog-Images/blog-background5.jpeg") 50% 0 no-repeat fixed;
     background-size: cover;
-    height: 100%;
     justify-content: center;
 }
 /* to counter the anchor default of center */
@@ -2580,7 +2653,7 @@ button {
     display: grid;
     grid-template-columns: 1fr 3fr;
     grid-template-rows: repeat(2, auto);
-    grid-gap: 15px;
+    gap: 15px;
     max-width: 500px;
     margin: 20px 10px;
 }
@@ -2621,6 +2694,10 @@ button {
     height: 100%;
     width: 100%;
 }
+.translate-trick:hover + .quicklinks-post-info-container h4 {
+    color: #4e71dd;
+    transition: color .2s ease-in;
+}
 .quicklinks-post-info-wrapper:hover {
     /* translating the wrapper caused the text within to blur. 
     Decided to put an empty div surrounding the same space that translates instead. 
@@ -2642,6 +2719,7 @@ button {
     font-size: 1.1em;
     line-height: 20px;
     position: relative;
+    transition: color .2s ease-out;
     /*
     pointer-events: auto;
     */
@@ -2680,7 +2758,7 @@ button {
     font-size: 1em;
     border: 2px solid #EDEDED;
     font-weight: 700;
-    padding: 5px 15px 5px 15px;
+    padding: 5px 15px;
     color: #EDEDED;
 }
 .see-more-btn-blog:hover {
@@ -2694,7 +2772,7 @@ button {
     border: 3px solid #1C2332;
     font-size: 1.2em;
     font-weight: 700;
-    padding: 20px 50px 20px 50px;
+    padding: 20px 50px;
     background-color: inherit;
     transition: background-color .2s ease-out, color .2s ease-out;
 }
@@ -2774,7 +2852,7 @@ button {
 .blog-posts-wrapper-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 16px;
+    gap: 16px;
     max-width: 1400px;
     padding: 0 25px;
 }
@@ -2835,7 +2913,6 @@ button {
     color: black;
     margin-left: 5px;
     font-size: .8em;
-    
 }
 .loading-container {
     display: flex;
@@ -2865,7 +2942,7 @@ button {
     }
     .blog-posts-wrapper-grid {
         grid-template-columns: repeat(2, 1fr);
-        grid-gap: 36px;
+        gap: 36px;
     }
     .nav-diff {
         margin-bottom: 30vh;
@@ -2885,10 +2962,7 @@ button {
 
 /* Login Page */
 .form-bg {
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    inset: 0;
     position: absolute;
     z-index: -1;
     animation: bg-animation 70s linear alternate infinite;
@@ -3012,8 +3086,7 @@ button {
     padding: 20px;
 }
 .signup-footer-wrapper .footer-icon {
-    margin-left: 1rem;
-    margin-right: 1rem;
+    margin: 0 1rem;
 }
 .signup-footer-wrapper .fill-white {
     fill: white;
