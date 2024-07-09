@@ -1883,7 +1883,7 @@ button {
     inset: 0;
 }
 .background-image {
-    background: url("/Style/About-Images/main-img.jpg") 50% 50% no-repeat;
+    background: url("/Style/About-Images/main-img.webp") 50% 50% no-repeat;
     background-size: cover;
     position: absolute;
     opacity: .5;
