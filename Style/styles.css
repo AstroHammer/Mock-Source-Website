@@ -579,7 +579,7 @@ button {
         padding-bottom: 5em;
     }
     .main-img-mq-bg {
-        background-image: url("/Style/Website-Images/main-pic.jpeg");
+        background-image: url("/Style/Website-Images/main-pic.webp");
         background-position: center;
         background-size: cover;
         position: absolute;
