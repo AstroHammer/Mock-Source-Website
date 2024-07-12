@@ -24,3 +24,4 @@ const postObserver = new IntersectionObserver(entries => {
 }, config)
 
 postObserver.observe(loading);
+

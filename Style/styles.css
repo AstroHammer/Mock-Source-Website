@@ -529,7 +529,13 @@ button {
 }
 .main-img {
     width: 90%;
+    height: 100%;
     border-radius: 20%;
+}
+.image-wrap {
+    place-content: center;
+    width: 100%;
+    height: 100%;
 }
 .main-img-wrap:before { /* additional psuedo-element to overlay the :after (shadow) psuedoelement */
     content: ""; 
@@ -579,9 +585,6 @@ button {
         padding-bottom: 5em;
     }
     .main-img-mq-bg {
-        background-image: url("/Style/Website-Images/main-pic.webp");
-        background-position: center;
-        background-size: cover;
         position: absolute;
         inset: 0;  
         opacity: .4;
@@ -591,6 +594,11 @@ button {
         -ms-clip-path: polygon(0 0, 100% 0, 100% 86%, 0 96%, 0 0);
         -o-clip-path: polygon(0 0, 100% 0, 100% 86%, 0 96%, 0 0);
         display: block;
+    }
+    .main-img-mq-bg img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
     }
     .main-flex {
         justify-content: flex-start;
@@ -630,7 +638,7 @@ button {
 
 /*social icons */
 .icon-flex {
-    padding: 0 5% 5em 30%;
+    padding: 0 5% 5em 20%;
 }
 .social-icons {
     justify-content: space-between;
@@ -650,12 +658,17 @@ button {
 .shorten-svg {
     width: 70px;
 }
+@media screen and (max-width: 1500px) {
+    .icon-flex {
+        padding-top: 5%;
+    }
+}
 @media screen and (max-width: 980px) {
     .icon-fill-container {
         margin: 20px 0;
     }
     .icon-flex {
-        padding-left: 20%;
+        padding-left: 5%;
     }
 }
 @media screen and (max-width: 840px) {
@@ -977,7 +990,7 @@ button {
 .arrow-btn svg {
     fill:#1C2332;
 }
-.mq900-panel2-btn-left .arrow-btn svg, .panel2-btn-left .arrow-btn svg, .panel-btn-left .arrow-btn svg {
+.mq900-panel2-btn-left .arrow-btn img, .panel2-btn-left .arrow-btn img, .panel-btn-left .arrow-btn img {
     transform: rotate(180deg);
 }
 @media screen and (min-width: 900px) {
@@ -1882,12 +1895,16 @@ button {
     width: 100%;
     inset: 0;
 }
-.background-image {
-    background: url("/Style/About-Images/main-img.webp") 50% 50% no-repeat;
-    background-size: cover;
+.about-bg-image {
     position: absolute;
     opacity: .5;
+}
+.about-bg-image img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
     animation: fade-in-bg 3s ease backwards;
+    
 }
 @keyframes fade-in-bg {
     0% {
@@ -2644,7 +2661,7 @@ button {
     position: relative;
 }
 .fixed-background {
-    background: url("/Style/Blog-Images/blog-background5.jpeg") 50% 0 no-repeat fixed;
+    background: url("/Style/Blog-Images/blog-background5-resized.webp") 50% 0 no-repeat fixed;
     background-size: cover;
     justify-content: center;
 }
