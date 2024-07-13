@@ -248,10 +248,10 @@ dotsNav.addEventListener('click', e => {
 
 
 
-const pp50s = document.querySelectorAll('svg.pp50');
-const pp_40s = document.querySelectorAll('svg.pp-40');
-const pp_130s = document.querySelectorAll('svg.pp-130');
-const pp140s = document.querySelectorAll('svg.pp140');
+const pp50s = document.querySelectorAll('img.pp50');
+const pp_40s = document.querySelectorAll('img.pp-40');
+const pp_130s = document.querySelectorAll('img.pp-130');
+const pp140s = document.querySelectorAll('img.pp140');
 const config1 = {
     root: null,
     rootMargin: '0px',
