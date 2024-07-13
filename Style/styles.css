@@ -750,7 +750,7 @@ button {
     }
 }
 @media screen and (min-width: 400px) {
-    .snippet-panel-arrow-btn-container {
+    .snippet-panel-arrow-btn {
         display: none;
     }
     .first-snip {
