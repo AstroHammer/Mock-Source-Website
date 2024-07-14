@@ -14,7 +14,7 @@
         <nav class="horizontal-padding cont-pos hidden-nav1">
             <ul class="header-list dis-flex">
                 <li class="list-item list-logo">
-                    <img class="logo" src="/Style/pushwork-logo.svg" alt="logo">
+                    <img class="logo" src="/Style/pushwork-logo.svg" alt="logo" width="25" height="25">
                 </li>
                 <li class="list-item">
                     <a class="nav-links" href="home.html">home</a>
@@ -86,9 +86,10 @@
             <div class="dark-background fill-parent"></div>
             <div class="about-bg-image fill-parent">
                 <picture>
-                    
-                    <source srcset="Style/About-Images/main-img.webp" media="(min-width:400px)">
-                    <img src="Style/About-Images/main-img-mobile.webp" alt="landing iamge" loading="lazy" decoding="async">
+                    <source type="image/webp" srcset="Style/About-Images/main-img.webp" media="(min-width:500px)" width="360" height="780">
+                    <source type="image/png" srcset="Style/About-Images/main-img.png" media="(min-width:500px)" width="360" height="780">
+                    <source type="image/webp" srcset="Style/About-Images/main-img-mobile.webp" media="(max-width:499px)" width="360" height="780">
+                    <img src="Style/About-Images/main-img-mobile.png" alt="landing image" width="360" height="780">
                 </picture>
             </div>
             <section class="about-title cont-pos pos-rel">
@@ -119,7 +120,10 @@
                         </h2>
                         <div class="accordion-content" id="panel1-content" aria-labelledby="panel1-heading" aria-hidden="false" role="region">
                             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur maxime cumque, sit repellat quasi deserunt ea sunt nesciunt rerum magni laborum! Consectetur nam maiores assumenda modi accusantium porro illo libero!</p>
-                            <img src="/Style/About-Images/ourstory-cropped.webp" alt="Landscape look-out between trees of a sunrise peaking over mountains" class="accordion-image">
+                            <picture>
+                                <source type="image/webp" srcset="Style/About-Images/ourstory-cropped.webp" width="844" height="1200">
+                                <img src="Style/About-Images/ourstory-cropped.png" alt="Landscape look-out between trees of a sunrise peaking over mountains" class="accordion-image" width="844" height="1200">
+                            </picture>
                         </div>
                     </div>
                     <div class="accordion-panel">
@@ -133,7 +137,10 @@
                         </h2>
                         <div class="accordion-content" id="panel2-content" aria-labelledby="panel2-heading" aria-hidden="false" role="region">
                             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur maxime cumque, sit repellat quasi deserunt ea sunt nesciunt rerum magni laborum! Consectetur nam maiores assumenda modi accusantium porro illo libero!</p>
-                            <img src="/Style/About-Images/mission-cropped.webp" alt="Starry night-purple sky with a silhouette of a person looking up" class="accordion-image">
+                            <picture>
+                                <source type="image/webp" srcset="Style/About-Images/mission-cropped.webp" width="640" height="758">
+                                <img src="Style/About-Images/mission-cropped.png" alt="Starry night-purple sky with a silhouette of a person looking up" class="accordion-image" width="640" height="758">
+                            </picture>
                         </div>
                     </div>
                     <div class="accordion-panel">
@@ -147,7 +154,10 @@
                         </h2>
                         <div class="accordion-content" id="panel3-content" aria-labelledby="panel3-heading" aria-hidden="false" role="region">
                             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur maxime cumque, sit repellat quasi deserunt ea sunt nesciunt rerum magni laborum! Consectetur nam maiores assumenda modi accusantium porro illo libero!</p>
-                            <img src="/Style/About-Images/values-cropped.webp" alt="Three comfortable and happy people working on a project together in front of a computer" class="accordion-image">
+                            <picture>
+                                <source type="image/webp" srcset="Style/About-Images/values-cropped.webp" width="667" height="480">
+                                <img src="Style/About-Images/values-cropped.png" alt="Three comfortable and happy people working on a project together in front of a computer" class="accordion-image" width="667" height="480">
+                            </picture>
                         </div>
                     </div>
                     <div class="accordion-panel">
@@ -161,7 +171,10 @@
                         </h2>
                         <div class="accordion-content" id="panel4-content" aria-labelledby="panel4-heading" aria-hidden="false" role="region">
                             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur maxime cumque, sit repellat quasi deserunt ea sunt nesciunt rerum magni laborum! Consectetur nam maiores assumenda modi accusantium porro illo libero!</p>
-                            <img src="/Style/About-Images/social2-cropped.webp" alt="Groups of people with yellow vests in a park picking up trash and planting trees" class="accordion-image">
+                            <picture>
+                                <source type="image/webp" srcset="Style/About-Images/social2-cropped.webp" width="800" height="480">
+                                <img src="Style/About-Images/social2-cropped.png" alt="Groups of people with yellow vests in a park picking up trash and planting trees" class="accordion-image" width="800" height="480">
+                            </picture>
                         </div>
                     </div>
                 </div>
@@ -188,9 +201,10 @@
                                 <article class="timeline-card">
                                     <div class="timeline-row dis-flex">
                                         <div class="slide-img">
-                                            <div>
-                                                <img class="img-control" src="/Style/About-Images/2015.webp" alt="Four-story brick building on the corner of a street">
-                                            </div>
+                                            <picture>
+                                                <source type="image/webp" srcset="Style/About-Images/2015.webp">
+                                                <img class="img-control" src="Style/About-Images/2015.png" alt="Four-story brick building on the corner of a street" width="650" height="900">
+                                            </picture>
                                         </div>
                                         <div class="slide-sum">
                                             <h3>2015</h3>
@@ -203,7 +217,10 @@
                                 <article class="timeline-card">
                                     <div class="timeline-row dis-flex">
                                         <div class="slide-img">
-                                            <img class="img-control" src="/Style/About-Images/2016.webp" alt="Two forward facing smiling business people where one is shaking hands over table with another business person">
+                                            <picture>
+                                                <source type="image/webp" srcset="Style/About-Images/2016.webp">
+                                                <img class="img-control" src="Style/About-Images/2016.png" alt="Two forward facing smiling business people where one is shaking hands over table with another business person" width="417" height="626">
+                                            </picture>
                                         </div>
                                         <div class="slide-sum">
                                             <h3>2016</h3>
@@ -216,7 +233,10 @@
                                 <article class="timeline-card">
                                     <div class="timeline-row dis-flex">
                                         <div class="slide-img">
-                                            <img class="img-control" src="/Style/About-Images/2017.webp" alt="Very tall, several story stone and glass building on the corner of a major intersection">
+                                            <picture>
+                                                <source type="image/webp" srcset="Style/About-Images/2017.webp">
+                                                <img class="img-control" src="Style/About-Images/2017.png" alt="Very tall, several story stone and glass building on the corner of a major intersection" width="350" height="350">
+                                            </picture>
                                         </div>
                                         <div class="slide-sum">
                                             <h3>2017</h3>
@@ -229,7 +249,10 @@
                                 <article class="timeline-card">
                                     <div class="timeline-row dis-flex">
                                         <div class="slide-img">
-                                            <img class="img-control" src="/Style/About-Images/2019.webp" alt="an Earth globe with thumbtacks marking several spots">
+                                            <picture>
+                                                <source type="image/webp" srcset="Style/About-Images/2019.webp">
+                                                <img class="img-control" src="Style/About-Images/2019.png" alt="an Earth globe with thumbtacks marking several spots" width="300" height="450">
+                                            </picture>
                                         </div>
                                         <div class="slide-sum">
                                             <h3>2019</h3>
@@ -244,7 +267,10 @@
                                 <article class="timeline-card">
                                     <div class="timeline-row dis-flex">
                                         <div class="slide-img">
-                                            <img class="img-control" src="/Style/About-Images/2020.webp" alt="Arms reaching into view to merge and combine seperate pieces of a model building in front of a laptop">
+                                            <picture>
+                                                <source type="image/webp" srcset="Style/About-Images/2020.webp">
+                                                <img class="img-control" src="Style/About-Images/2020.png" alt="Arms reaching into view to merge and combine seperate pieces of a model building in front of a laptop" width="600" height="600">
+                                            </picture>
                                         </div>
                                         <div class="slide-sum">
                                             <h3>2020</h3>
@@ -260,7 +286,10 @@
                                 <article class="timeline-card">
                                     <div class="timeline-row dis-flex">
                                         <div class="slide-img">
-                                            <img class="img-control" src="/Style/About-Images/2021.webp" alt="5 horizontal stacks of coins with seedlings on top sitting on soil, each stack becoming larger, and each seedling further in growth">
+                                            <picture>
+                                                <source type="image/webp" srcset="Style/About-Images/2021.webp">
+                                                <img class="img-control" src="Style/About-Images/2021.png" alt="5 horizontal stacks of coins with seedlings on top sitting on soil, each stack becoming larger, and each seedling further in growth" width="527" height="300">
+                                            </picture>
                                         </div>
                                         <div class="slide-sum">
                                             <h3>2021</h3>
@@ -273,7 +302,10 @@
                                 <article class="timeline-card">
                                     <div class="timeline-row dis-flex">
                                         <div class="slide-img">
-                                            <img class="img-control" src="/Style/About-Images/2022.webp" alt="a theatre of people facing a stage with a projector screen behind a panel of speakers">
+                                            <picture>
+                                                <source type="image/webp" srcset="Style/About-Images/2022.webp">
+                                                <img class="img-control" src="Style/About-Images/2022.png" alt="a theatre of people facing a stage with a projector screen behind a panel of speakers" width="520" height="780">
+                                            </picture>
                                         </div>
                                         <div class="slide-sum">
                                             <h3>2022</h3>
@@ -286,7 +318,10 @@
                                 <article class="timeline-card">
                                     <div class="timeline-row dis-flex">
                                         <div class="slide-img">
-                                            <img class="img-control" src="/Style/About-Images/2024.webp" alt="picture of an robot touching a holographic screen to take over the world">
+                                            <picture>
+                                                <source type="image/webp" srcset="Style/About-Images/2024.webp">
+                                                <img class="img-control" src="Style/About-Images/2024.png" alt="picture of an robot touching a holographic screen to take over the world" width="640" height="348">
+                                            </picture>
                                         </div>
                                         <div class="slide-sum">
                                             <h3>2024</h3>
@@ -337,7 +372,10 @@
                                 <p><q>A user-centric website is one that has the needs of the user in mind. However, your user experience (UX) doesn't have to be complex. There are some basic elements you can deploy that will help your users have a positive experience interacting with your company's online presence.</q></p>
                             </div>
                             <div class="right-side-article">
-                                <img src="https://myuxacademy.com/wp-content/uploads/2024/03/Blog-Images-5-1024x512.png" alt="two images of a mobile device with a website structure on the screen, one with an X and one with a check mark, UX Academy">
+                                <picture>
+                                    <source type="image/webp" srcset="Style/About-Images/royalty-free-img.webp">
+                                    <img src="Style/About-Images/royalty-free-img.png" alt="metal object" width="600" height="450">
+                                </picture>
                             </div>
                         </article>
                     </section>
@@ -351,7 +389,10 @@
                                 <p><q>Without the ability to track referral channels' performance and accurately attribute sales and conversions to specific sources, there’s no way to be sure you’re investing your marketing budget in the right channels.</q></p>
                             </div>
                             <div class="right-side-article">
-                                <img src="https://marketingweek.imgix.net/content/uploads/2024/05/16160209/Marketers-discussing-marketing.jpg?auto=compress,format&q=60&w=736&h=438" alt="A team of people at a table looking at a document the leader is pointing at">
+                                <picture>
+                                    <source type="image/webp" srcset="Style/About-Images/royalty-free-img.webp">
+                                    <img src="Style/About-Images/royalty-free-img.png" alt="metal object" width="600" height="450">
+                                </picture>
                             </div>
                         </article>
                     </section>
@@ -365,7 +406,10 @@
                                 <p><q>Danny van Kooten is a Dutch programmer who decided to reduce his carbon output by no longer eating beef or flying. Then, five months ago, he made a change that had an even bigger impact—and it took only a few keystrokes.</q></p>
                             </div>
                             <div class="right-side-article">
-                                <img src="https://media.wired.com/photos/5ef112bdaf3d0a069fd1d57b/master/w_2560%2Cc_limit/Thompson_Web%2520Art.jpg" alt="a hand with scissors tending a bonzai tree made of ones and zeros">
+                                <picture>
+                                    <source type="image/webp" srcset="Style/About-Images/royalty-free-img.webp">
+                                    <img src="Style/About-Images/royalty-free-img.png" alt="metal object" width="600" height="450">
+                                </picture>
                             </div>
                         </article>
                     </section>
@@ -379,7 +423,10 @@
                                 <p><q>In an era where consumer expectations are perpetually in a state of renewal, products and services can no longer afford to be just functional or aesthetically pleasing; they must also deliver exceptional experiences.</q></p>
                             </div>
                             <div class="right-side-article">
-                                <img src="https://assets.entrepreneur.com/content/3x2/2000/1696863687-web-design-experience-economy-1023-g1414603763.jpg" alt="a laptop with a wavy webpage, an emoticon message, text message, and magnifying glass suspended above it">
+                                <picture>
+                                    <source type="image/webp" srcset="Style/About-Images/royalty-free-img.webp">
+                                    <img src="Style/About-Images/royalty-free-img.png" alt="metal object" width="600" height="450">
+                                </picture>
                             </div>
                         </article>
                     </section>
@@ -396,15 +443,15 @@
                 <h4>xyzcompany corp</h4>
                 <p class="p-pad-btm-space">Together, we create a harmonious environment where innovation flourishes, bonds strengthen, and everyone feels valued. </p>
                 <div class="f-link-marg">
-                    <img class="footer-contact-icon" src="Style/SVG/Footer XYZCompany Contact Icon SVGs/job-svgrepo-com.svg" alt="briefcase representing careers" width="25px" height="25px">
+                    <img class="footer-contact-icon" src="Style/SVG/Footer XYZCompany Contact Icon SVGs/job-svgrepo-com.svg" alt="briefcase representing careers" width="25" height="25">
                     <a href="#">Careers</a>
                 </div>
                 <div class="f-link-marg">
-                    <img class="footer-contact-icon" src="Style/SVG/Footer XYZCompany Contact Icon SVGs/phone-svgrepo-com.svg" alt="phone with smiley face on screen representing phone number" width="25px" height="25px">
+                    <img class="footer-contact-icon" src="Style/SVG/Footer XYZCompany Contact Icon SVGs/phone-svgrepo-com.svg" alt="phone with smiley face on screen representing phone number" width="25" height="25">
                     <a href="tel:18182222222">+1 818 222 2222</a>
                 </div>
                 <div class="f-link-marg">
-                    <img class="footer-contact-icon" src="Style/SVG/Footer XYZCompany Contact Icon SVGs/email-svgrepo-com.svg" alt="envelope representing mail" width="25px" height="25px">                    
+                    <img class="footer-contact-icon" src="Style/SVG/Footer XYZCompany Contact Icon SVGs/email-svgrepo-com.svg" alt="envelope representing mail" width="25" height="25">                    
                     <a href="mailto:xyzcompanycorp@gmail.com?subject=Order%20Content">xyzcompanycorp@gmail.com</a>
                 </div>
             </section>
@@ -464,16 +511,16 @@
                 </ul>
                 <div class="dis-flex social-icon-pos">
                     <a href="https://www.facebook.com/" target="_blank">
-                        <img class="footer-social-icon" src="Style/SVG/Footer Resource Social Icon SVGs/facebook-3-2.svg" alt="facebook logo" width="15px" height="15px">
+                        <img class="footer-social-icon" src="Style/SVG/Footer Resource Social Icon SVGs/facebook-3-2.svg" alt="facebook logo" width="15" height="15">
                     </a>
                     <a href="https://www.instagram.com/" target="_blank">
-                        <img class="footer-social-icon" src="Style/SVG/Footer Resource Social Icon SVGs/instagram-2016-5.svg" alt="instagram logo" width="15px" height="15px">
+                        <img class="footer-social-icon" src="Style/SVG/Footer Resource Social Icon SVGs/instagram-2016-5.svg" alt="instagram logo" width="15" height="15">
                     </a>
                     <a href="https://x.com/" target="_blank">
-                        <img class="footer-social-icon icon-resize" src="Style/SVG/Footer Resource Social Icon SVGs/twitter-6(1).svg" alt="twitter logo" width="25px" height="15px">
+                        <img class="footer-social-icon icon-resize" src="Style/SVG/Footer Resource Social Icon SVGs/twitter-6(1).svg" alt="twitter logo" width="25" height="15">
                     </a>
                     <a href="https://www.linkedin.com/" target="_blank">
-                        <img class="footer-social-icon fill-white" src="Style/SVG/Footer Resource Social Icon SVGs/linkedin-icon-1.svg" alt="linkedin logo" width="15px" height="15px">
+                        <img class="footer-social-icon fill-white" src="Style/SVG/Footer Resource Social Icon SVGs/linkedin-icon-1.svg" alt="linkedin logo" width="15" height="15">
                     </a>
                 </div>
             </section>
