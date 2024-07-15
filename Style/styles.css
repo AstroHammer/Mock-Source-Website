@@ -2263,6 +2263,7 @@ button {
     margin-bottom: 0;
     overflow: hidden;
     border-radius: 10px;
+    height: 50%;
 }
 .img-control{
     /* object-fit: cover;
@@ -2286,7 +2287,7 @@ button {
     }
     .slide-img {
         max-width: 70%;
-        
+        height: auto;
     }
 }
 @media screen and (max-width: 500px) {
