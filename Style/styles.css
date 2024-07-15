@@ -308,6 +308,7 @@ button {
     background: #3B404E;
     padding: 10px 40px;
     border-radius: 5px;
+    transition: none;
 }
 .list-logo {
     flex-basis: 35%;
