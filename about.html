@@ -5,7 +5,103 @@
     <meta name="description" content="The story of Source, our mission, values, and timeline of accomplishments">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style type="text/css">
+        .sticky-section {
+            position: -webkit-sticky;
+            position: -moz-sticky;
+            position: -ms-sticky;
+            position: -o-sticky;
+            position: sticky;
+            top: 0;
+        }
         
+        .background-image-wrapper {
+            height: 100vh;
+        }
+        
+        .dark-background {
+            position: absolute;
+            background-color: black;
+            z-index: -1;
+        }
+        
+        .fill-parent {
+            height: 100%;
+            width: 100%;
+            inset: 0;
+        }
+        
+        .about-bg-image {
+            position: absolute;
+            opacity: .5;
+        }
+        
+        .about-bg-image img {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+            animation: fade-in-bg 3s ease backwards;
+        }
+        
+        @keyframes fade-in-bg {
+            0% {
+                opacity: 0;
+            }
+        }
+        
+        .about-title {
+            display: grid;
+            color: white;
+            height: 100%;
+            max-width: 1500px;
+            z-index: 5;
+            opacity: 1;
+            animation: fade-in-bg 3s ease-in-out forwards;
+        }
+        
+        .about-grid-item {
+            align-self: center;
+            text-align: center;
+            overflow: hidden;
+            padding: 0 5%;
+        }
+        
+        .big-title {
+            font-weight: 700;
+            font-size: clamp(2.5em, 10vw, 6em);
+            padding: 0 5px 20px 5px;
+            line-height: 1em;
+        }
+        
+        .fade {
+            transform: perspective(200px) translateZ(-1000px);
+            opacity: 0;
+            animation: fade-in-title 2s ease forwards;
+            line-height: 1em;
+            margin-bottom: .3em;
+            font-size: clamp(1.5em, 4vw, 2.5em)
+        }
+        
+        @keyframes fade-in-title {
+            0% {
+            }
+        
+            100% {
+                transform: translateZ(100px);
+                opacity: 1;
+            }
+        }
+        
+        .fade-in-1 {
+            animation-delay: 3s;
+        }
+        
+        .fade-in-2 {
+            animation-delay: 4.5s;
+        }
+        
+        .fade-in-3 {
+            animation-delay: 6s;
+        }        
     </style>
     <link rel="stylesheet" href="/Style/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
