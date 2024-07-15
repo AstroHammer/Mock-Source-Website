@@ -6,7 +6,6 @@
     --fs-h2-content: clamp(2em, 5vw, 2.5em) ;
     --fs-p-content: clamp(1rem, 2vw , 1.4em);
 }
-
 * {
     margin: 0;
     padding: 0;
@@ -20,7 +19,6 @@ body {
     background-color: #EDEDED;
 }
 /* Base */
-
 small {
     font-size: 1em;
     font-variant: small-caps;
@@ -441,7 +439,6 @@ button {
     border-radius: 5px;
     background: linear-gradient(45deg, #7083bd, #B57BA6, #7083bd, #B57BA6);
     transition: all .3s linear;
-    
 }
 .hamburger-menu-list li:hover:after {
     transform: scaleX(1);
@@ -475,17 +472,13 @@ button {
     .hamburger-menu {
         left: 50%;
         border-radius: 25px !important;
-
     }
     .hamburger-container .toggle:checked + .hamburger + .hamburger-menu {
         left: -75%;
         top: 50px;
         height: 450px;
     }
-    
 }
-
-
 /* MAIN */
 .main-flex-wrapper {
     padding-top: 2em;
@@ -494,9 +487,7 @@ button {
 }
 .main-flex {
     justify-content: center;
-
 }
-.about-bg-image
 .intro-wrapper {
     flex-basis: 700px;
     margin-right: 2%;
@@ -576,7 +567,7 @@ button {
         -moz-transform: skewY(-3deg);
         -ms-transform: skewY(-3deg);
         -o-transform: skewY(-3deg);
-      }
+    }
 }
 @media screen and (max-width: 1500px) {
     .main-img-wrap {
@@ -638,7 +629,6 @@ button {
         position: absolute;
     }
 }
-
 /*social icons */
 .icon-flex {
     padding: 0 5% 5em 20%;
@@ -682,7 +672,6 @@ button {
         justify-content: center;
     }
 }
-
 /* SECTION ONE */
 .s1-grid {
     grid-column-gap: 10%;
@@ -830,11 +819,6 @@ button {
         transition: background-color .2s linear;
     }
 }
-
-
-
-
-
 /* SECTION TWO */
 .s2-grid {
     gap: 10%;
@@ -914,9 +898,6 @@ button {
         border-radius: 50%;
     }
 }
-
-
-
 /* SECTION THREE */
 .s3-intro {
     max-width: 800px;
@@ -1051,9 +1032,7 @@ button {
         font-size: .8em;
     }
 }
-
 /* SECTION FOUR */
-
 .s4-intro-container {
     padding-top: 100px;
 }
@@ -1066,7 +1045,6 @@ button {
     -ms-clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%, 0 10%);
     -o-clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%, 0 10%);
 }
-
 /* Animated Carousel */
 .inner-scroller {
     display: flex;
@@ -1122,7 +1100,6 @@ button {
     height: 70px;
 }
 /* Animating SVG Icons */
-
 @keyframes svganimate {
     20%, 80%, to {
         transform: translateY(0);
@@ -1149,9 +1126,7 @@ button {
         transform: translateY(0) scaleY(1);
     }
 }
-
 /*End Keyframes for SVG Icons */
-
 /* brand marketing icon svg styles */
 .cls-1 {
   fill: #ffbc0a;
@@ -1173,7 +1148,6 @@ button {
   fill: #274c77;
 }
 /* end brand marketing icon svg styles */
-
 /* faded sides for better transition in&out */
 .top-carousel[data-animated="true"], .bottom-carousel[data-animated="true"] {
     overflow: hidden;
@@ -1478,8 +1452,7 @@ button {
     right: 537px;
     transform: rotate(140deg);
     animation-delay: 4s;
-}
-    
+} 
 /* puzzle path animation */
 @keyframes puzzle50 {
     0% {
@@ -1529,7 +1502,6 @@ button {
         z-index: 1;
     }
 }
-
 @media screen and (max-width: 1300px) {
     .s5-wrapper {
         overflow: hidden;
@@ -1671,7 +1643,6 @@ button {
         height: 500px;
     }
 }
-
 /* SECTION SEVEN */
 .s7-container {
     max-width: 1000px;
@@ -1776,9 +1747,6 @@ button {
         width: 50%;
     }
 }
-
-
-
 /* Services Page */
 /* HEADER & MAIN */
 .serv-body-bg-color {
@@ -1867,7 +1835,6 @@ button {
     max-height: 0;
     overflow: hidden;
     transition: max-height .3s ease-out;
-    
 }
 .accordion-item-body-content {
     border-top: 2px solid;
@@ -1948,9 +1915,7 @@ button {
     font-size: clamp(1.5em, 4vw, 2.5em)
 }
 @keyframes fade-in-title {
-    0% {
-
-    }
+    0% {}
     100% {
         transform: translateZ(100px);
         opacity: 1;
@@ -1999,7 +1964,6 @@ button {
     --_panel-padding: .75rem;
     --_panel-gap: 1rem;
 }
-
 .accordion-trigger span {
     color: white;
 }
@@ -2081,8 +2045,7 @@ button {
         height: 50rem;
     }
     .accordion-content > p {
-        margin-top: 20px;
-        
+        margin-top: 20px;  
     }
 }
 @media (max-width: 750px) {
@@ -2187,7 +2150,6 @@ button {
 .year-listing li button:hover {
     color: black;
 }
-
 .year-listing button {
     font-size: 1.5rem;
     background-color: inherit;
@@ -2266,9 +2228,6 @@ button {
     height: 50%;
 }
 .img-control{
-    /* object-fit: cover;
-    width: 100%;
-    height: 100%; */
     border-radius: 10px;
     transition: transform .5s ease-in;
 }
@@ -2328,9 +2287,7 @@ button {
     cursor: pointer;
     margin-left: 10px;
 }
-
 /* Articles Section */
-
 .article-section-container {
     background: #EDEDED;
     max-width: 82.5rem;
@@ -2411,7 +2368,6 @@ button {
         margin: 50px 25px 0 25px;
     }
 }
-
 /* Team Page */
 /* Main */
 .team-main {
@@ -2441,8 +2397,7 @@ button {
     left: 50%;
     transform: translateX(-50%);
     clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
-    background-color: #DEE0E9;
-    
+    background-color: #DEE0E9; 
 }
 .testing {
     text-align: right;
@@ -2652,7 +2607,6 @@ button {
     }
     .diamond-bg {
         width: 100%;
-
     }
 }
 @media screen and (max-width: 500px) {
@@ -2781,9 +2735,6 @@ button {
     line-height: 20px;
     position: relative;
     transition: color .2s ease-out;
-    /*
-    pointer-events: auto;
-    */
 }
 .quicklinks-post-info-container p {
     font-size: .8em;
@@ -3014,13 +2965,6 @@ button {
         grid-template-columns: repeat(1, 1fr);
     }
 }
-@media screen and (max-width: 507px) {
-
-}
-@media screen and (max-width: 400px) {
-
-}
-
 /* Login Page */
 .form-bg {
     inset: 0;
@@ -3122,7 +3066,6 @@ button {
     margin-bottom: 15px;
     padding: 15px 10px;
 }
-
 .sign-up-options-wrapper img {
     width: 30px;
     height: 30px;
@@ -3169,7 +3112,6 @@ button {
     }
     .interface-placemarker {
         flex-basis: 50%;
-        
     }
     .left-content-container {
         flex-basis: 30%;
