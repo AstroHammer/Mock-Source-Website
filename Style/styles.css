@@ -2323,7 +2323,9 @@ button {
     width: 45%;
     padding-right: 100px;
 }
-.left-side-article h4 {
+.left-side-article span {
+    font-variant: small-caps;
+    font-weight: 700;
     font-size: clamp(.8rem, 4vw, 1.5rem);
 }
 .left-side-article p {
