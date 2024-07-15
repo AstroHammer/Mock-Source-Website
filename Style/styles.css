@@ -496,6 +496,7 @@ button {
     justify-content: center;
 
 }
+.about-bg-image
 .intro-wrapper {
     flex-basis: 700px;
     margin-right: 2%;
@@ -1910,8 +1911,7 @@ button {
     object-fit: cover;
     height: 100%;
     width: 100%;
-    animation: fade-in-bg 3s ease backwards;
-    
+    animation: fade-in-bg 3s ease backwards;  
 }
 @keyframes fade-in-bg {
     0% {

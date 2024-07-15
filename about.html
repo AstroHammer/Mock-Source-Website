@@ -99,6 +99,23 @@
                     <source type="image/png" srcset="Style/About-Images/main-img.png" media="(min-width:500px)" width="360" height="780">
                     <source type="image/webp" srcset="Style/About-Images/main-img-mobile.webp" media="(max-width:499px)" width="360" height="780">
                     <img src="Style/About-Images/main-img-mobile.png" alt="landing image" width="360" height="780">
+                    <style>
+                        .about-bg-image {
+                            position: absolute;
+                            opacity: .5;
+                        }
+                        .about-bg-image img {
+                            object-fit: cover;
+                            height: 100%;
+                            width: 100%;
+                            animation: fade-in-bg 3s ease backwards;  
+                        }
+                        @keyframes fade-in-bg {
+                            0% {
+                                opacity: 0;
+                            }
+                        }
+                    </style>
                 </picture>
             </div>
             <section class="about-title cont-pos pos-rel">
