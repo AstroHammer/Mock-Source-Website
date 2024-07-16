@@ -22,11 +22,11 @@ body {
 small {
     font-size: 1em;
     font-variant: small-caps;
-    color: #7B7E86;
+    color: #676870;
     font-weight: 700;
 }
 p {
-    color: #7B7E86;
+    color: #676870;
     font-weight: 500;
     font-size: 1.1em;
     cursor: default;
@@ -227,8 +227,11 @@ button {
 }
 /* gloss-wrapper link default look */
 .gray-gloss-wrapper a, .blue-gloss-wrapper a  {
-    color: gray;
+    color: #6B6B6B;
     font-size: .9em;
+}
+.blue-gloss-wrapper a, .blue-gloss-wrapper p {
+    color: #ADADAD;
 }
 /* gray bg footer text-colors */
 .gray-gloss-wrapper a:hover {
@@ -239,7 +242,7 @@ button {
     color: #D6D9E2;
 }
 .blue-gloss-wrapper a:hover {
-    color: #b9b9b9;
+    color: whitesmoke;
 }
 .fill-white {
     filter: invert(100%);
