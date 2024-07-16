@@ -2638,16 +2638,19 @@ button {
     height: auto;
     position: relative;
 }
-@media screen and (max-height:770px) and (max-width:400px) {
-    .fixed-background-container {
-        height: 270svh;
-    }
+.blog-main-bg {
+    object-fit: cover;
+    position: fixed;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
 }
-.fixed-background {
+/* .fixed-background {
     background: url("/Style/Blog-Images/blog-background5-resized.webp") 50% 0 no-repeat fixed;
     background-size: cover;
     justify-content: center;
-}
+} */
 /* to counter the anchor default of center */
 .fixed-background a {
     text-align: left;
