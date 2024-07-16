@@ -297,7 +297,7 @@ button {
     padding: 1.5em 0;
 }
 .nav-links {
-    color: #696E78;
+    color: #ACADB4;
     font-size: 1.2em;
     font-variant: small-caps;
     font-weight: 600;
@@ -421,6 +421,9 @@ button {
     width: 100%;
     flex-direction: column;
     justify-content: space-around;
+}
+.hamburger-menu-list .nav-links {
+    color: #696E78;
 }
 .hamburger-menu-list li {
     height: 100%;
@@ -709,10 +712,8 @@ button {
     font-size: 1.2em;
     padding: 5px 0;
 }
-.snippet-txt-container span {
-    color: #7B7E86;
+.snippet-txt-container p {
     font-size: 1em;
-    font-weight: 500;
 }
 @media screen and (max-width: 1020px) {
     .s1-grid {
@@ -1585,7 +1586,7 @@ button {
 }
 .block-spans {
     display: block;
-    color: gray;
+    color: #676870;
     font-weight: 600;
     font-size: var(--fs-200);
 }
