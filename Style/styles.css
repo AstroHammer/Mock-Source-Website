@@ -205,7 +205,6 @@ button {
     font-size: 17px;
     margin-bottom: 1.3rem;
     background-color: #EDEDED;
-    color: #1C2332;
     font-weight: 600;
     border-radius: 6px;
     outline: none;
@@ -215,10 +214,11 @@ button {
     color: #EDEDED;
 }
 .form span a {
-    opacity: .5;
+    color: white;
+    opacity: .8;
 }
 .form span a:hover {
-    opacity: .9;
+    opacity: 1;
 }
 .purple-blue-bg-animation {
     background-image: linear-gradient(45deg, #7083bd, #B57BA6, #7083bd, #B57BA6);
