@@ -266,6 +266,9 @@ button {
     color: #D6D9E2;
     padding-bottom: 50px;
 }
+.polygon-path-intro-bg p {
+    color: #ACADB4;
+}
 @media screen and (max-width:360px) {
     .polygon-path-intro-bg h4 {
         padding-bottom: 100px;
