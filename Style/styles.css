@@ -2634,7 +2634,7 @@ button {
 }
 /* Blog Page */
 .fixed-background-container {
-    height:auto;
+    height: calc(100% + 100vh);
     position: relative;
 }
 .fixed-background {
