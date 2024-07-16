@@ -1,5 +1,5 @@
-let mql = window.matchMedia('(max-width: 1000px)');
-let mql2 = window.matchMedia('(min-width: 999px');
+let mql = window.matchMedia('(width <= 1000px)');
+let mql2 = window.matchMedia('(width >= 1001px');
 
 const signUpInterface = document.querySelector('.user-details-interface-container');
 
@@ -7,7 +7,7 @@ const interfacePlaceMarker = document.querySelector('.interface-placemarker');
 const interfaceOrigin = document.querySelector ('.form-wrapper');
 
 const screenSize = window.innerWidth;
-if (screenSize < 1000) {
+if (screenSize <= 1000) {
     interfacePlaceMarker.appendChild(signUpInterface);
 }
 

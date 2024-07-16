@@ -3118,7 +3118,7 @@ button {
 .signup-footer-wrapper .fill-white {
     fill: white;
 }
-@media screen and (max-width: 1000px) {
+@media screen and (width <= 1000px) {
     .right-half {
         display: none;
     }
@@ -3151,12 +3151,12 @@ button {
         align-items: flex-end;
     }
 }
-@media screen and (min-width: 701px) {
+@media screen and (width > 700px) {
     .signup-hidden2 {
         display: none;
     }
 }
-@media screen and (max-width: 700px) {
+@media screen and (width <= 700px) {
     .signup-hidden1 {
         display: none;
     }
