@@ -2915,7 +2915,8 @@ button {
     font-size: .8em;
 }
 .blog-post-txt-container span {
-    color: #6096ba;
+    color: #2E516B;
+    font-weight: 600;
 }
 .blog-post-txt-container h4 {
     font-size: 1.5em;
