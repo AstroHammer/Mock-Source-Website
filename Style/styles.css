@@ -1667,6 +1667,9 @@ button {
 .s7-wrapper .double-btn {
     flex-basis: 220px;
 }
+.s7-text small {
+    color: #ACADB4;
+}
 @media screen and (max-width: 1000px) {
     .s7-text {
         flex-basis: 60%;
