@@ -2633,9 +2633,15 @@ button {
     }
 }
 /* Blog Page */
+
 .fixed-background-container {
-    height: calc(100% + 100dvh);
+    height: auto;
     position: relative;
+}
+@media screen and (max-height:770px) and (max-width:400px) {
+    .fixed-background-container {
+        height: 270dvh;
+    }
 }
 .fixed-background {
     background: url("/Style/Blog-Images/blog-background5-resized.webp") 50% 0 no-repeat fixed;
