@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="description" content="Source website featuring summaries of who we are and what we do: We Are a Full-Service Marketing and Design Firm">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preload" as="image" href="Style/Website-Images/main-pic-mobile.webp">
     <link rel="stylesheet" href="Style/styles.css">
+    <link rel="preload" fetchpriority="high" as="image" href="Style/Website-Images/main-pic-mobile.webp">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
@@ -112,7 +112,7 @@
             <section class="main-img-wrap dis-flex pos-rel">
                 <picture class="image-wrap dis-flex">
                     <source type="image/webp" srcset="Style/Website-Images/main-pic-item.webp" width="820" height="550">
-                    <img class="main-img" src="Style/Website-Images/main-pic-item.png" alt="three colleagues looking ambitiously at a screen of information" width="820" height="550">
+                    <img class="main-img wide-display" src="Style/Website-Images/main-pic-item.png" alt="three colleagues looking ambitiously at a screen of information" width="820" height="550" loading="lazy">
                 </picture>
             </section>
         </div>
