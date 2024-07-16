@@ -2640,7 +2640,7 @@ button {
 }
 @media screen and (max-height:770px) and (max-width:400px) {
     .fixed-background-container {
-        height: 270dvh;
+        height: 270svh;
     }
 }
 .fixed-background {
